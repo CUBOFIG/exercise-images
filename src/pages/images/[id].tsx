@@ -1,7 +1,15 @@
-const id = () => {
+import { useRouter } from 'next/router'
+
+
+
+const Id = () => {
+
+  const router = useRouter()
+  const { id } = router.query
+
   return (
-    <div>[id]</div>
+    <div>[{id}]</div>
   )
 }
 
-export default id
+export default Id
